@@ -7,7 +7,7 @@
 
   async function loadData() {
     try {
-      const res = await fetch("https://58c0-89-65-148-74.ngrok-free.app/stats");
+      const res = await fetch("https://8217-89-65-148-74.ngrok-free.app/stats");
       const json = await res.json();
       data = { ...defaultData, ...json };
       render();
@@ -23,7 +23,7 @@
       return;
     }
 
-    const res = await fetch("https://58c0-89-65-148-74.ngrok-free.app/stats", {
+    const res = await fetch("https://8217-89-65-148-74.ngrok-free.app/stats", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Statystyki Szopa w Grounded</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Hamburger Icon -->
+  <div id="hamburger" class="hamburger" aria-label="Toggle Menu">
+    <span></span><span></span><span></span>
+  </div>
+
+  <!-- Side Navigation -->
+  <nav id="sideNav" class="side-nav">
+    <a href="#" data-target="szopaStats" class="active">Staty Szopa</a> 
+    <a href="#" data-target="slyskStats">Podniesienia ŚlyskoNogiego</a>
+    <a href="#" data-target="patrykStats">Podniesienia Patryka Zsosne</a>
+  </nav>
+
+  <!-- Hidden Admin Trigger -->
+  <button id="adminBtn" aria-label="Admin"></button>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Szopa -->
+    <section id="szopaStats" class="stats-section active">
+      <h1>Statystyki Szopa w <span>Grounded</span></h1>
+      <div class="stats-row">
+        <div class="stat-box" data-key="deaths">
+          <div class="label">Śmierci</div>
+          <div class="value" style="color:var(--death-color);" id="deathValue">0</div>
+        </div>
+        <div class="stat-box" data-key="falls">
+          <div class="label">Podnieś mnie</div>
+          <div class="value" style="color:var(--fall-color);" id="fallValue">0</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ŚlyskoNogi -->
+    <section id="slyskStats" class="stats-section">
+      <h1>Podniesienia <span>ŚlyskoNogiego</span></h1>
+      <div class="stats-row">
+        <div class="stat-box" data-key="slyskLifts">
+          <div class="label">Ile razy podniósł Szopa</div>
+          <div class="value" style="color:var(--lift-slysk);" id="slyskValue">0</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Patryk -->
+    <section id="patrykStats" class="stats-section">
+      <h1>Podniesienia <span>Patryka Zsosne</span></h1>
+      <div class="stats-row">
+        <div class="stat-box" data-key="patrykLifts">
+          <div class="label">Ile razy podniósł Szopa</div>
+          <div class="value" style="color:var(--lift-patryk);" id="patrykValue">0</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
